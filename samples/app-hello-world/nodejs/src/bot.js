@@ -50,7 +50,7 @@ export class EchoBot extends TeamsActivityHandler {
         this.onMessage(async (context, next) => {
             TurnContext.removeRecipientMention(context.activity);
             const text = context.activity.text.trim().toLocaleLowerCase();
-            await context.sendActivity('You said ' + text);
+            await context.sendActivity('Everyone said ' + text);
         });
     }
 }
